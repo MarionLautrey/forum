@@ -1,0 +1,101 @@
+/* Style de base pour le corps de la page */
+body {
+    font-family: Arial, sans-serif; /* Police de caractères */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
+    background: linear-gradient(to right, #a69ae6, #c1a9f4); /* Dégradé de violet */
+    color: #333; /* Couleur du texte */
+}
+
+/* Style pour l'en-tête de la page */
+header {
+    background-color: #8f7fcf; /* Fond violet */
+    color: white; /* Texte blanc */
+    padding: 20px; /* Espacement intérieur */
+    display: flex; /* Disposition flexible */
+    justify-content: space-between; /* Alignement horizontal */
+    align-items: center; /* Alignement vertical */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre portée */
+}
+
+/* Style pour le logo */
+.logo {
+    font-size: 30px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    text-decoration: none; /* Pas de soulignement */
+    color: white; /* Texte blanc */
+}
+
+/* Style pour les boutons d'authentification */
+.auth-buttons button {
+    background-color: #FFFFFF; /* Fond blanc (correction de la couleur) */
+    color: #8f7fcf; /* Texte violet */
+    border: none; /* Pas de bordure */
+    padding: 12px 20px; /* Espacement intérieur */
+    cursor: pointer; /* Curseur en forme de main */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    transition: all 0.3s ease; /* Animation de transition */
+}
+
+/* Style au survol des boutons d'authentification */
+.auth-buttons button:hover {
+    background-color: #8f7fcf; /* Fond violet */
+    color: white; /* Texte blanc */
+}
+
+/* Style pour le conteneur du forum */
+.forum-container {
+    width: 80%; /* Largeur du conteneur */
+    margin: 20px auto; /* Centrage horizontal */
+    background: white; /* Fond blanc */
+    padding: 25px; /* Espacement intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Style pour les catégories du forum */
+.categorie {
+    margin-bottom: 1px; /* Marge en bas */
+    padding: 20px; /* Espacement intérieur */
+    border-bottom: 2px solid #8f7fcf; /* Bordure violette en bas */
+    display: flex; /* Disposition flexible */
+    flex-direction: column; /* Alignement vertical */
+    background: white; /* Fond blanc */
+}
+
+/* Style pour les rubriques dans les catégories */
+.rubrique {
+    margin-top: 15px; /* Marge en haut */
+    padding: 15px; /* Espacement intérieur */
+    background: #f7f9fc; /* Fond très léger */
+    border-radius: 5px; /* Coins arrondis */
+    border: 1px solid #e0e6fa; /* Bordure légère */
+    width: 100%; /* Largeur totale */
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+}
+
+/* Style pour les liens dans les rubriques */
+.rubrique a {
+    text-decoration: none; /* Pas de soulignement */
+    color: #8f7fcf; /* Texte violet */
+    font-weight: bold; /* Texte en gras */
+    font-size: 18px; /* Taille de la police */
+    transition: color 0.3s ease; /* Animation de transition */
+}
+
+/* Style au survol des liens dans les rubriques */
+.rubrique a:hover {
+    color: #6e58b7; /* Texte violet plus foncé */
+}
+
+/* Style pour les sections de statistiques (forum et membres) */
+.statForum, .statMembre {
+    text-align: center; /* Centrage du texte */
+    padding: 20px; /* Espacement intérieur */
+    background: #e0d0e9; /* Fond clair */
+    margin-top: 30px; /* Marge en haut */
+    color: #f08da1; /* Couleur du texte */
+    border-radius: 5px; /* Coins arrondis pour un look plus doux */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de profondeur */
+}

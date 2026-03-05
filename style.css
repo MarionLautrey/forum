@@ -1,0 +1,616 @@
+/* === Base === */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #a69ae6, #c1a9f4);
+    color: #333;
+}
+
+/* === Header === */
+header {
+    background-color: #8f7fcf;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.auth-buttons button {
+    background-color: #fff;
+    color: #8f7fcf;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-buttons button:hover {
+    background-color: #8f7fcf;
+    color: white;
+}
+
+/* === Photo de profil === */
+.ppUtilisateur {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #8f7fcf;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    text-transform: uppercase; /* Transforme le texte en majuscules */
+}
+
+/* === Page content === */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #3a3a3a;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    border-color: #8f7fcf;
+    outline: none;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 12px;
+    background: #8f7fcf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background: #5900cc;
+}
+
+/* === Liens === */
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links a {
+    color: #8f7fcf;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* === Modal === */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 0;
+}
+
+.modal-content {
+    background: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    cursor: pointer;
+}
+
+/* === Forum container === */
+.forum-container {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Catégorie et rubriques === */
+.categorie {
+    padding: 20px;
+    border-bottom: 2px solid #8f7fcf;
+    background: white;
+}
+
+.rubrique {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f7f9fc;
+    border-radius: 5px;
+    border: 1px solid #e0e6fa;
+}
+
+.rubrique a {
+    text-decoration: none;
+    color: #8f7fcf;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.rubrique a:hover {
+    color: #6e58b7;
+}
+
+/* === Stats === */
+.statForum, .statMembre {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #6e58b7;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Article === */
+.article-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.article-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    flex-grow: 1;
+}
+
+.article-date {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.dernierArticle {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* === Pseudo utilisateur === */
+.user-pseudo {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #8f7fcf;
+    background-color: #f7f9fc;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.user-pseudo:hover {
+    background-color: #e0e6fa;
+    color: #6e58b7;
+}
+
+/* === Formulaire article === */
+.article-form {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-form .form-group {
+    margin-bottom: 20px;
+}
+
+.article-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.article-form .form-group input,
+.article-form .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #f7f9fc;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.article-form .form-group input:focus,
+.article-form .form-group textarea:focus {
+    border-color: #8f7fcf;
+    background-color: #fff;
+    outline: none;
+}
+
+.article-form .form-group button {
+    width: 100%;
+    padding: 14px;
+    background: #8f7fcf;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.article-form .form-group button:hover {
+    background: #6e58b7;
+    transform: translateY(-2px);
+}
+
+.article-form .form-group button:active {
+    background: #5900cc;
+    transform: translateY(1px);
+}
+
+/* === Nombre de messages === */
+.NombreMessage {
+    margin-left: auto;
+    padding-left: 20px;
+    text-align: right;
+    font-weight: bold;
+    color: #6e58b7;
+}
+
+textarea#reponse {
+    height: 70px; /* ou plus selon ton besoin */
+    width: 90%; /* ajuste si besoin */
+    resize: vertical; /* permet à l'utilisateur de redimensionner verticalement */
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* === Boutons généraux === */
+button {
+    background-color: #8f7fcf;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 5px; /* espace autour */
+}
+
+button:hover {
+    background-color: #6e58b7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    background-color: #5900cc;
+    transform: translateY(1px);
+}
+
+.infosDroite {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.dernMess {
+    font-size: 0.85em;
+    color: #666;
+    margin: 0;
+}
+.page-rubrique {
+    width: 80%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.page-rubrique-sub {
+    margin-bottom: 25px;
+}
+
+.page-rubrique-sub p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6e58b7;
+    margin: 0 0 10px 0;
+}
+
+.TitreArt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f9fc;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #e0e6fa;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.TitreArt:hover {
+    background-color: #e0e6fa;
+}
+
+.TitreArt a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #8f7fcf;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.TitreArt a:hover {
+    color: #6e58b7;
+}
+
+.ppUtilisateur-rubrique {
+    background-color: #8f7fcf;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    font-size: 1rem;
+}
+
+.dernMess {
+    text-align: right;
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+
+/* === Article === */
+.article {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.article p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.article .ppUtilisateur {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #8f7fcf;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.article .nomUtilisateur {
+    font-size: 1rem;
+    color: #333;
+}
+
+.article .dateMessage {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* === Buttons === */
+button {
+    background-color: #8f7fcf;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #6e58b7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    background-color: #5900cc;
+    transform: translateY(1px);
+}
+
+/* === Formulaire réponse === */
+textarea#reponse {
+    height: 80px;
+    width: 90%;
+    resize: vertical;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+textarea#reponse:focus {
+    border-color: #8f7fcf;
+    outline: none;
+}
+
+#BtnReponse {
+    width: 100%;
+    padding: 12px;
+    background: #8f7fcf;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+#BtnReponse:hover {
+    background-color: #6e58b7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+#BtnReponse:active {
+    background-color: #5900cc;
+    transform: translateY(1px);
+}
+
+/* === Statistiques === */
+.statForum, .statMembre {
+    width: 80%;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.statForum p, .statMembre p {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.statForum .forum, .statMembre .membre {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.membre {
+    margin-top: 10px;
+}
+
+.form-ajout-article {
+    margin-left: 110px; /* Tu peux ajuster */
+  }
+  
+
+  #BtnReponse {
+    width: auto; /* ou une valeur fixe si tu préfères */
+    max-width: 200px; /* adapte selon tes préférences */
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #8f7fcf ; /* Couleur de fond */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #BtnReponse:hover {
+    background-color: #6e58b7;
+  }

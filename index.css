@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #a69ae6, #c1a9f4); /* Dégradé doux de violet */
+    color: #333;
+}
+header {
+    background-color: #8f7fcf; /* Violet plus doux */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+.auth-buttons button {
+    background-color: #FFFF; /* Violet très léger */
+    color: #8f7fcf; /* Violet principal */
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.auth-buttons button:hover {
+    background-color: #8f7fcf;
+    color: white;
+}
+.forum-container {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.categorie {
+    margin-bottom: 25px;
+    padding: 20px;
+    border-bottom: 2px solid #8f7fcf; /* Ligne violette douce */
+}
+.rubrique {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f7f9fc; /* Fond très léger */
+    border-radius: 5px;
+    border: 1px solid #e0e6fa; /* Bordure légère */
+}
+.rubrique a {
+    text-decoration: none;
+    color: #8f7fcf; /* Violet doux */
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+.rubrique a:hover {
+    color: #6e58b7; /* Lien violet un peu plus foncé au survol */
+}
+.statForum {
+    text-align: center;
+    padding: 20px;
+    background: #f0f4f8; /* Fond clair et doux */
+    margin-top: 30px;
+    color: #555;
+}
+.statMembre {
+    text-align: center;
+    padding: 20px;
+    background: #f0f4f8; /* Fond clair et doux */
+    margin-top: 30px;
+    color: #555;
+}
