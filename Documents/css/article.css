@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #a69ae6, #c1a9f4); /* Dégradé doux de violet */
-    color: #333;
+    color: #33;
 }
 header {
     background-color: #8f7fcf; /* Violet plus doux */
